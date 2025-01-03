@@ -1,0 +1,17 @@
+.sideMenuDiv {
+    height: 1000px;
+    width: 200px;
+    background-color: aqua;
+    border-radius: 5px;
+    /* display: inline-block; */
+    margin-top: 20px;
+    float: left;
+}
+
+.sideMenuDiv ul {
+    padding-top: 20px;
+}
+
+.sideMenuDiv li {
+    padding-top: 10px;
+}
