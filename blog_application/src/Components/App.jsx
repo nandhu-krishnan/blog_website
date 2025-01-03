@@ -1,19 +1,18 @@
-import Content from './Content.jsx';
-import Header from './Header.jsx'
-import SideMenu from './SideMenu.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import '../Style/index.css'
+import LoginPage from './Login.jsx';
+import HomePage from './HomePage.jsx';
 
 function App() {
   return(
     <>
-      <Header />
-      <SideMenu />
-      <Content contentHeader="Day1" content="Watched youtube videos and explored udemy courses." />
-      <Content contentHeader="Day2" content="Starting reading notes about react" />
-      <Content contentHeader="Day3" content="Continue working on a blog application" />
-      <Content contentHeader="Day4" content="Continue working on a blog application" />
-      <Content contentHeader="Day5" content="Continue working on a blog application" />
-      <Content contentHeader="Day6" content="Continue working on a blog application" />
-
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<LoginPage />} />
+          <Route path="/home" element={<HomePage />} />
+        </Routes>
+      </Router>
     </>
   );
 }
